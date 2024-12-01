@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <JUCERPROJECT id="ZcUhEA" name="VUMeter" projectType="audioplug" useAppConfig="0"
-              addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1">
+              addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1" companyName="GouodLabs"
+              companyWebsite="www.gouod-records.de">
   <MAINGROUP id="HEUYcb" name="VUMeter">
     <GROUP id="{7813863E-4B76-CE43-858D-5AD67DBA640F}" name="Source">
       <FILE id="EOZDiY" name="PluginProcessor.cpp" compile="1" resource="0"

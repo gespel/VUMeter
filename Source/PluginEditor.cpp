@@ -1,11 +1,3 @@
-/*
-  ==============================================================================
-
-    This file contains the basic framework code for a JUCE plugin editor.
-
-  ==============================================================================
-*/
-
 #include "PluginProcessor.h"
 #include "PluginEditor.h"
 #include "math.h"
@@ -14,10 +6,8 @@
 VUMeterAudioProcessorEditor::VUMeterAudioProcessorEditor (VUMeterAudioProcessor& p)
     : AudioProcessorEditor (&p), audioProcessor (p)
 {
-    // Make sure that before the constructor has finished, you've set the
-    // editor's size to whatever you need it to be.
     startTimer(10.0);
-    setSize (400, 300);
+    setSize (300, 200);
 }
 
 VUMeterAudioProcessorEditor::~VUMeterAudioProcessorEditor()
@@ -27,21 +17,24 @@ VUMeterAudioProcessorEditor::~VUMeterAudioProcessorEditor()
 //==============================================================================
 void VUMeterAudioProcessorEditor::paint (juce::Graphics& g)
 {
-    auto& random = juce::Random::getSystemRandom();
-    // (Our component is opaque, so we must completely fill the background with a solid colour)
-    g.fillAll (getLookAndFeel().findColour (juce::ResizableWindow::backgroundColourId));
+    g.fillAll (juce::Colours::white);
 
     g.setColour (juce::Colours::white);
     g.setFont (juce::FontOptions (15.0f));
-    //float angle = (float) random.nextFloat()*2.5 + 3.3;
-    float angle = audioProcessor.getRMS()*2.5 + 3.3;
+    float angle = audioProcessor.getRMS()*M_PI + 3.3;
+    g.setColour(juce::Colours::grey);
+    g.drawLine(80 * cos(M_PI) + 150, 80 * sin(M_PI) + 150, 90 * cos(M_PI) + 150, 90 * sin(M_PI) + 150, 2.0);
+    g.drawLine(80 * cos(1.25 * M_PI) + 150, 80 * sin(1.25 * M_PI) + 150, 90 * cos(1.25 * M_PI) + 150, 90 * sin(1.25 * M_PI) + 150, 2.0);
+    g.drawLine(80 * cos(1.5 * M_PI) + 150, 80 * sin(1.5 * M_PI) + 150, 90 * cos(1.5 * M_PI) + 150, 90 * sin(1.5 * M_PI) + 150, 2.0);
+    g.drawLine(80 * cos(1.75 * M_PI) + 150, 80 * sin(1.75 * M_PI) + 150, 90 * cos(1.75 * M_PI) + 150, 90 * sin(1.75 * M_PI) + 150, 2.0);
+    g.drawLine(80 * cos(2 * M_PI) + 150, 80 * sin(2 * M_PI) + 150, 90 * cos(2 * M_PI) + 150, 90 * sin(2 * M_PI) + 150, 2.0);
+    g.setColour(juce::Colours::darkslateblue);
     g.drawLine(30 * cos(angle) + 150, 30 * sin(angle) + 150, 100 * cos(angle) + 150, 100 * sin(angle) + 150, 3.0);
-    //std::cout << angle << std::endl;
+    g.drawFittedText ("Made by Gouod Records", getLocalBounds(), juce::Justification::centredTop, 1);
 }
 
 void VUMeterAudioProcessorEditor::resized()
 {
 
-    // This is generally where you'll want to lay out the positions of any
-    // subcomponents in your editor..
+
 }
