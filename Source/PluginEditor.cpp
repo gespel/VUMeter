@@ -30,7 +30,7 @@ void VUMeterAudioProcessorEditor::paint (juce::Graphics& g)
     g.drawLine(80 * cos(2 * M_PI) + 150, 80 * sin(2 * M_PI) + 150, 90 * cos(2 * M_PI) + 150, 90 * sin(2 * M_PI) + 150, 2.0);
     g.setColour(juce::Colours::darkslateblue);
     g.drawLine(30 * cos(angle) + 150, 30 * sin(angle) + 150, 100 * cos(angle) + 150, 100 * sin(angle) + 150, 3.0);
-    g.drawFittedText ("Made by Gouod Records", getLocalBounds(), juce::Justification::centredTop, 1);
+    g.drawFittedText ("Made by Phi Labs", getLocalBounds(), juce::Justification::centredTop, 1);
 }
 
 void VUMeterAudioProcessorEditor::resized()
