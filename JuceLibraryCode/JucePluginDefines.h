@@ -47,10 +47,10 @@
  #define JucePlugin_Desc                   "VUMeter"
 #endif
 #ifndef  JucePlugin_Manufacturer
- #define JucePlugin_Manufacturer           "GouodLabs"
+ #define JucePlugin_Manufacturer           "Phi Labs"
 #endif
 #ifndef  JucePlugin_ManufacturerWebsite
- #define JucePlugin_ManufacturerWebsite    "www.gouod-records.de"
+ #define JucePlugin_ManufacturerWebsite    "www.phi-labs.com"
 #endif
 #ifndef  JucePlugin_ManufacturerEmail
  #define JucePlugin_ManufacturerEmail      ""
@@ -110,10 +110,10 @@
  #define JucePlugin_AUManufacturerCode     JucePlugin_ManufacturerCode
 #endif
 #ifndef  JucePlugin_CFBundleIdentifier
- #define JucePlugin_CFBundleIdentifier     com.GouodLabs.VUMeter
+ #define JucePlugin_CFBundleIdentifier     com.PhiLabs.VUMeter
 #endif
 #ifndef  JucePlugin_AAXIdentifier
- #define JucePlugin_AAXIdentifier          com.GouodLabs.VUMeter
+ #define JucePlugin_AAXIdentifier          com.PhiLabs.VUMeter
 #endif
 #ifndef  JucePlugin_AAXManufacturerCode
  #define JucePlugin_AAXManufacturerCode    JucePlugin_ManufacturerCode
@@ -137,7 +137,7 @@
  #define JucePlugin_IAASubType             JucePlugin_PluginCode
 #endif
 #ifndef  JucePlugin_IAAName
- #define JucePlugin_IAAName                "GouodLabs: VUMeter"
+ #define JucePlugin_IAAName                "Phi Labs: VUMeter"
 #endif
 #ifndef  JucePlugin_VSTNumMidiInputs
  #define JucePlugin_VSTNumMidiInputs       16
@@ -152,10 +152,10 @@
  #define JucePlugin_ARATransformationFlags  0
 #endif
 #ifndef  JucePlugin_ARAFactoryID
- #define JucePlugin_ARAFactoryID           "com.GouodLabs.VUMeter.factory"
+ #define JucePlugin_ARAFactoryID           "com.PhiLabs.VUMeter.factory"
 #endif
 #ifndef  JucePlugin_ARADocumentArchiveID
- #define JucePlugin_ARADocumentArchiveID   "com.GouodLabs.VUMeter.aradocumentarchive.1.0.0"
+ #define JucePlugin_ARADocumentArchiveID   "com.PhiLabs.VUMeter.aradocumentarchive.1.0.0"
 #endif
 #ifndef  JucePlugin_ARACompatibleArchiveIDs
  #define JucePlugin_ARACompatibleArchiveIDs  ""
